@@ -97,7 +97,9 @@
                     <b>{{ $t("tasks.createTime") }}：</b>
                     <span>{{ new Date(task.info.startTime).format('yyyy-MM-dd hh:mm:ss') }}</span>
                   </p>
+                  <vDetail :taskInfo=task.info></vDetail>
                 </div>
+                
               </Poptip>
             </div>
           </div>
@@ -108,6 +110,7 @@
 </template>
 
 <script>
+import detail from './detail.vue'
 export default {
   // data
   data() {
@@ -196,6 +199,9 @@ export default {
         return false
       })
     }
+  },
+  components:{
+    vDetail:detail
   }
 }
 </script>

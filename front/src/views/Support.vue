@@ -41,7 +41,7 @@ export default {
   },
   created() {
     this.$noSpinHttp.get(this.$config.adminServer + 'recommend/soft').then(result => {
-      this.softList = result.data
+      this.softList = result.data || []
     })
   }
 }

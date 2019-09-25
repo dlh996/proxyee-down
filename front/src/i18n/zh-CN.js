@@ -48,6 +48,7 @@ export default {
     head: '请求头',
     body: '请求体',
     detail: '下载详情',
+    part: '区块',
     checkSameTask: '检测到可能相同的下载任务，是否选择任务进行刷新？',
     sameTaskList: '任务列表',
     sameTaskPlaceholder: '请选择要刷新的任务',

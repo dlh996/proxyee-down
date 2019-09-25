@@ -48,6 +48,7 @@ export default {
     head: '要求標頭',
     body: '要求主體',
     detail: '下載細節',
+    part: '區塊',
     checkSameTask: '偵測到可能相同的下載任務，是否選擇任務進行更新？',
     sameTaskList: '任務清單',
     sameTaskPlaceholder: '請選擇要更新的任務',

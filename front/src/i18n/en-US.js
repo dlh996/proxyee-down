@@ -48,6 +48,7 @@ export default {
     head: 'Header',
     body: 'Body',
     detail: 'Details',
+    part:'Part',
     checkSameTask: 'The same task already exists. Refresh the task?',
     sameTaskList: 'Task List',
     sameTaskPlaceholder: 'Please select the task to refresh',
