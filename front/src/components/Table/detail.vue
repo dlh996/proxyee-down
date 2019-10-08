@@ -3,7 +3,7 @@
     <p v-for="task in this.chunkInfoList"
       :key=task.index>
       <b>{{ $t('tasks.part') }}{{task.index+1}}:</b>
-      <Progress :percent="calcProgress(task)"></Progress>
+      <Progress :percent="calcProgress(task)">{{calcSpeed(task)}}</Progress>
     </p>
   </div>
 </template>
@@ -31,6 +31,9 @@ export default {
     calcProgress(task) {
       let progress = this.$numeral(task.downSize / task.totalSize).multiply(100)
       return new Number(progress.format('0'))
+    },
+    calcSpeed(task){
+      return this.$numeral(task.speed).format('0.00 ib') +'/S'
     }
   }
 }
@@ -41,9 +44,9 @@ export default {
   height: 166px;
 }
 .task-detail-list-scroll > p > b {
-  width: 15%;
+  width: 13%;
 }
 .task-detail-list-scroll > p > div {
-  width: 85%;
+  width: 79%;
 }
 </style>
